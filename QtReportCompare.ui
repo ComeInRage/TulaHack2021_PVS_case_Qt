@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtReportCompare</class>
+ <widget class="QMainWindow" name="QtReportCompare">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>573</width>
+    <height>402</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QtWidgetsClass</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTreeWidget" name="treeWidget">
+      <column>
+       <property name="text">
+        <string>File</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Path</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_2" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Путь к PVS:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="pvsEdit"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="oldpvsEdit"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="projectsBtn">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Проекты...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="analyzeBtn">
+         <property name="text">
+          <string>Анализ</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>573</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>projectsBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>QtReportCompare</receiver>
+   <slot>chooseBtn_onclick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>498</x>
+     <y>358</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>-14</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>analyzeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>QtReportCompare</receiver>
+   <slot>analyze()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>527</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>362</x>
+     <y>-2</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>chooseBtn_onclick()</slot>
+  <slot>analyze()</slot>
+ </slots>
+</ui>
